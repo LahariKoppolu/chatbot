@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pace University</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #333; /* Dark text color */
+        }
+
+        /* Header styles */
+        header {
+            background-color: #00345d; /* Pace University blue color */
+            color: #fff; /* White text color */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            background-color: #007bff; /* Darker blue for navigation bar */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Main content styles */
+        .main-content {
+            padding: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333; /* Dark background for footer */
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Chatbot icon styles */
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #007bff; /* Pace University blue color */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        /* Chatbot container styles (initially hidden) */
+        .chatbot-container {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 430px;
+            background-color: #fff; /* White background for the chatbot container */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+            z-index: 1000;
+            overflow: hidden; /* Hide overflow content */
+        }
+
+        /* Optional: Close button styles */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* Added styles for content readability and color */
+        h2, h3, p {
+            color: #00345d; /* Pace University blue color for headings and paragraphs */
+        }
+
+        ul {
+            color: #555; /* Slightly darker text color for lists */
+        }
+
+        /* Additional Styles */
+        .accent-color {
+            color: #007bff; /* Accent color for links and emphasis */
+        }
+
+        .info-box {
+            background-color: #e9f5fc; /* Light blue background for info boxes */
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .info-box p {
+            color: #333; /* Dark text color for info box content */
+        }
+
+        .highlight-text {
+            color: #0056b3; /* Darker blue color for highlighted text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Pace University</h1>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#" class="accent-color">Home</a></li>
+            <li><a href="#" class="accent-color">About</a></li>
+            <li><a href="#" class="accent-color">Programs</a></li>
+            <li><a href="#" class="accent-color">Admissions</a></li>
+            <li><a href="#" class="accent-color">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <div class="info-box">
+            <h2>Welcome to Pace University's Course Advisor Chatbot!</h2>
+            <p>Discover Your Path to Success:</p>
+
+            <ul>
+                <li><strong>Personalized Recommendations:</strong> Tailored subject suggestions based on your background and career goals.</li>
+                <li><strong>Career Path Insights:</strong> Guidance on courses aligned with your desired career path.</li>
+                <li><strong>Course Comparisons:</strong> Compare courses and make informed decisions.</li>
+                <li><strong>24/7 Support:</strong> Instant answers to your academic queries.</li>
+            </ul>
+
+        </div>
+
+        <!-- Project Overview -->
+        <div class="info-box">
+            <h3>Project Overview</h3>
+            <p>Our project focuses on the implementation of a comprehensive AI-powered system to revolutionize the course selection process within the Graduate Education System at Pace University.</p>
+            <p>We utilize artificial intelligence and data analysis to address current challenges associated with course selection, offering intelligent recommendations, predictive analytics, and real-time feedback mechanisms.</p>
+            <p>The deliverables of the project include:</p>
+
+            <!-- List of Deliverables -->
+            <ul>
+                <li>User-friendly platform offering personalized course recommendations, comprehensive course exploration tools, and secure account management.</li>
+                <li>Secure and integrated infrastructure for managing student data, training/running AI recommendation algorithms, and connecting with existing student information systems.</li>
+                <li>Specialized software for analyzing student data to identify course selection trends, extract insights, and generate reports on student performance and program effectiveness.</li>
+                <li>Online surveys or questionnaires enabling student feedback on course content, difficulty, instructor effectiveness, and overall learning experience.</li>
+                <li>Comprehensive guides for students and advisors on platform navigation, recommendation access, feedback submission, and system utilization for student support and course selection guidance.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Chatbot icon (Dialogflow logo) -->
+    <div class="chatbot-icon" id="chatbot-icon">
+        <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_1080,q_100,w_1080/v1/gcs/platform-data-dsc/events/dialogflow-logo-square_2lcT7vI.png" alt="Dialogflow Icon" width="40">
+    </div>
+
+    <!-- Chatbot container (pop-up) -->
+    <div class="chatbot-container" id="chatbot-container">
+        <!-- Close button (optional) -->
+        <span class="close-button" onclick="closeChatbot()">X</span>
+        <!-- Dialogflow chatbot iframe -->
+        <iframe width="100%" height="100%" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/2b2db7cc-27d4-46bb-aa44-c5b87ab09813"></iframe>
+    </div>
+
+    <!-- JavaScript to handle chatbot pop-up -->
+    <script>
+        // Get the chatbot icon and container elements
+        const chatbotIcon = document.getElementById('chatbot-icon');
+        const chatbotContainer = document.getElementById('chatbot-container');
+
+        // Function to open the chatbot pop-up
+        function openChatbot() {
+            chatbotContainer.style.display = 'block';
+            // Close the pop-up if the user clicks outside of it
+            document.addEventListener('click', closeChatbotOutside);
+        }
+
+        // Function to close the chatbot pop-up
+        function closeChatbot() {
+            chatbotContainer.style.display = 'none';
+            document.removeEventListener('click', closeChatbotOutside);
+        }
+
+        // Function to close the pop-up if the user clicks outside of it
+        function closeChatbotOutside(event) {
+            if (!chatbotContainer.contains(event.target) && !chatbotIcon.contains(event.target)) {
+                closeChatbot();
+            }
+        }
+
+        // Event listener for clicking the chatbot icon to open the pop-up
+        chatbotIcon.addEventListener('click', openChatbot);
+    </script>
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "SykcS_2-tjJ-6ERAOMAxJ",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="SykcS_2-tjJ-6ERAOMAxJ"
+        domain="www.chatbase.co"
+        defer>
+        </script>
+</body>
+</html>

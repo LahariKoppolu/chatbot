@@ -1,0 +1,11 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: #005BBB;
+    color: white; 
+}
+
+/* Add more styling for navigation, chatbot container, etc. */
